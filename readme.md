@@ -1,6 +1,6 @@
 # FrostyToolsuite Linux
 
-## Prelude
+## Preface
 This guide assumes that you will be running your game through Proton (bought on Steam) and are using Ubuntu 22.04. This is likely to work on most Linux distributions. The paths given are assuming Need for Speed Heat. To use another game, you will need to know the name of the game folder and gameid (this can be seen in the URL on the store page for the game). It will also likely require alternative scripts for execution and setting up the mod folder
 
 ## Verified Games
