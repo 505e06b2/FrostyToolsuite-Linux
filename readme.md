@@ -27,7 +27,7 @@ This step seemed to be required for the Frosty Editor to open as expected
 1. Click "Open"
 1. Open your Steam Library and find this new entry
 1. Right click this entry, and open "Properties..."
-1. Is is likely a good idea to rename this Shortcut: in the textbox at the top, change the "*.exe" text to something more suitable
+1. It is likely a good idea to rename this Shortcut: in the textbox at the top, change the "*.exe" text to something more suitable
 1. Under Shortcut, paste the following into the "Launch Options" textbox - if using an external drive, this will need to be altered to your custom path: `STEAM_COMPAT_DATA_PATH="$HOME/.steam/steam/steamapps/compatdata/1222680/" %command%`. You cannot use tilde (`~`) in the Steam launch settings, but you can use environment variables.
 1. Under Compatibility, enable "Force the use of a specific Steam Play compatibility tool". Select the same Proton version as your game
 1. Close the Properties dialog
