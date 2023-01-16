@@ -35,7 +35,7 @@ This step seemed to be required for the Frosty Editor to open as expected
 ## Create a ModData folder that works with Frosty
 In the game folder, run the following command in the terminal:
 
-*By default, the `[profile_name]` will be "Editor" (FrostyEditor) or "Default" (FrostyModManager) - you will need to know your Profile name head of time*
+*By default, the `[profile_name]` will be "Editor" (FrostyEditor) or "Default" (FrostyModManager) - you will need to know your Profile name ahead of time*
 
 `mkdir -p ModData ModData/[profile_name]/patch ModData/[profile_name]/data`
 
