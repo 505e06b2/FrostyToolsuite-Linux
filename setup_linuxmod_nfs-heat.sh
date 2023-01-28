@@ -8,6 +8,11 @@ BCRYPT="bcrypt.dll"
 #cd to script folder
 cd -P -- "$(dirname -- "$0")"
 
+if [ ! -d "$FROSTY_PROFILE_PATH" ]; then
+	>&2 echo "Could not find Frosty profile ($FROSTY_PROFILE_PATH), modify this script to change the FROSTY_PROFILE_PATH"
+	exit 1
+fi
+
 #Frosty likes to delete any file with the same bytes as "bcrypt.dll" when launching
 if [ -e "$BCRYPT" ]; then
 	chmod 555 "$BCRYPT" #read+execute
