@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FROSTY_PROFILE_PATH="ModData/Edito"
+FROSTY_PROFILE_PATH="ModData/Editor"
 MODFOLDER="LinuxMod" #if you change this, make sure to also alter runMod.cmd
 
 BCRYPT="bcrypt.dll"
