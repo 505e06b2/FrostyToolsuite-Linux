@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FROSTY_PROFILE_PATH="ModData/Editor"
+FROSTY_PROFILE_PATH="ModData/Edito"
 MODFOLDER="LinuxMod" #if you change this, make sure to also alter runMod.cmd
 
 BCRYPT="bcrypt.dll"
@@ -29,12 +29,12 @@ mkdir "$MODFOLDER"
 ln -sr ./Data "$MODFOLDER/data"
 cp -r "$FROSTY_PROFILE_PATH/patch" "$MODFOLDER"
 
-ln -sr ./Patch/Win32/configurations/superbundleinstallpackage/* "$MODFOLDER/patch/win32/configurations/superbundleinstallpackage/"
-ln -sr ./Patch/Win32/configurations/superbundleinstallpackage2/* "$MODFOLDER/patch/win32/configurations/superbundleinstallpackage2/"
+ln -sr ./Patch/Win32/configurations/superbundleinstallpackage/* "$MODFOLDER/patch/win32/configurations/superbundleinstallpackage/" 2>&1 | grep -v "File exists"
+ln -sr ./Patch/Win32/configurations/superbundleinstallpackage2/* "$MODFOLDER/patch/win32/configurations/superbundleinstallpackage2/" 2>&1 | grep -v "File exists"
 
-ln -sr ./Patch/Win32/levels/frontend/* "$MODFOLDER/patch/win32/levels/frontend/"
-ln -sr ./Patch/Win32/levels/mainlevel/* "$MODFOLDER/patch/win32/levels/mainlevel/"
+ln -sr ./Patch/Win32/levels/frontend/* "$MODFOLDER/patch/win32/levels/frontend/" 2>&1 | grep -v "File exists"
+ln -sr ./Patch/Win32/levels/mainlevel/* "$MODFOLDER/patch/win32/levels/mainlevel/" 2>&1 | grep -v "File exists"
 
-ln -sr ./Patch/Win32/loc/* "$MODFOLDER/patch/win32/loc/"
+ln -sr ./Patch/Win32/loc/* "$MODFOLDER/patch/win32/loc/" 2>&1 | grep -v "File exists"
 
-ln -sr ./Patch/Win32/* "$MODFOLDER/patch/win32/"
+ln -sr ./Patch/Win32/* "$MODFOLDER/patch/win32/" 2>&1 | grep -v "File exists"
