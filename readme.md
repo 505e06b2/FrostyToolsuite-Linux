@@ -53,7 +53,7 @@ ModData
 1. At the bottom, click "New"
 1. Find your game executable ("NeedForSpeedHeat.exe") from the path noted in the prerequisites, you can follow a UNIX-style path from the `Z:\` drive letter, or on an external drive, you can find the root of it on one of the other drive letters
 1. Select this new entry and click "Select", wait for the cache to build
-1. Load a single mod into your profile (you can add more later) and Save
+1. Load a single mod into your profile (you can add more later) and Save (if in the Editor)
 1. At the top of the window, click "Launch"
 1. Once the dialog at the centre of the screen disappears, close Frosty
 1. In Steam in the Library tab, "Stop" the Frosty Non-Steam game
