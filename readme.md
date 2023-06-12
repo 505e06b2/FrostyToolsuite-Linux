@@ -80,8 +80,8 @@ ModData
 
 # Game Troubleshooting
 
-## Crashing when loading mods
-Try a different Proton version, or a version of [Proton GE](https://github.com/GloriousEggroll/proton-ge-custom/releases)
+## Crashing When Mods Are Loaded
+Try a different Proton version, or a version of [Proton GE](https://github.com/GloriousEggroll/proton-ge-custom/releases). The latest 3 major versions are likely to give the best results, otherwise try experimental
 
 ## Issues with EA Play (No Steam overlay, crashes)
 [Source for allowing continued use of Origin \(Works June 2023\)](https://twitter.com/p0358/status/1635796691902160896)
@@ -97,9 +97,9 @@ export STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam"
 ~/.steam/steam/steamapps/common/Proton\ -\ Experimental/proton run ~/Downloads/https://taskinoz.com/origin/
 ```
 
-3. _Before running the game_, open "$HOME/.steam/steam/steamapps/compatdata/1222680/pfx/drive_c/ProgramData/Origin/local.xml" for edting
+3. _Before running the game_, open `$HOME/.steam/steam/steamapps/compatdata/1222680/pfx/drive_c/ProgramData/Origin/local.xml` for editing (this is the equivalent of `C:\ProgramData\Origin\local.xml`)
 
-    Alter it to by adding the following 4 lines:
+    Alter it to by adding the following 4 lines above the `</Settings>` line as shown:
  ```xml
 ...
 
