@@ -4,7 +4,7 @@
 This guide assumes that you will be running your game through Proton (bought on Steam) and are using Ubuntu 22.04. This is likely to work on most Linux distributions. The paths given are assuming Need for Speed Heat. To use another game, you will need to know the name of the game folder and gameid (this can be seen in the URL on the store page for the game). It will also likely require alternative scripts for execution and setting up the mod folder
 
 ## Verified Games
-- [1222680] Need for Speed Heat
+- [[1222680](https://store.steampowered.com/app/1222680/)] Need for Speed Heat ([Proton GE v7-55](https://github.com/GloriousEggroll/proton-ge-custom/releases/tag/GE-Proton7-55))
 
 # Installation
 
@@ -80,8 +80,12 @@ ModData
 
 # Game Troubleshooting
 
+## Crashing when loading mods
+Try a different Proton version, or a version of [Proton GE](https://github.com/GloriousEggroll/proton-ge-custom/releases)
+
 ## Issues with EA Play (No Steam overlay, crashes)
-1. Download [OriginThinSetup](https://www.dm.origin.com/download) - [Forum Post](https://answers.ea.com/t5/Origin-Client-Web-Technical/Downloading-and-installing-Origin-Windows-and-Mac/m-p/11915666)
+[Source for allowing continued use of Origin \(Works June 2023\)](https://twitter.com/p0358/status/1635796691902160896)
+1. Download OriginSetup-10.5.119.52718.exe - [Archive Link \(Use caution\)](https://taskinoz.com/origin/)
 2. Set the STEAM_COMPAT_DATA_PATH and WINEPREFIX to your version, then execute the install:
 ```sh
 export STEAM_COMPAT_DATA_PATH="$HOME/.steam/steam/steamapps/compatdata/1222680/"
@@ -90,7 +94,21 @@ export WINEPREFIX="$HOME/.steam/steam/steamapps/compatdata/1222680/pfx"
 export STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam"
 
 #these 2 paths may be different if you use another Proton runtime or use a different downloads folder
-~/.steam/steam/steamapps/common/Proton\ -\ Experimental/proton run ~/Downloads/OriginThinSetup.exe
+~/.steam/steam/steamapps/common/Proton\ -\ Experimental/proton run ~/Downloads/https://taskinoz.com/origin/
+```
+
+3. _Before running the game_, open "$HOME/.steam/steam/steamapps/compatdata/1222680/pfx/drive_c/ProgramData/Origin/local.xml" for edting
+
+    Alter it to by adding the following 4 lines:
+ ```xml
+...
+
+<Setting value="true" key="MigrationDisabled" type="1"/>
+<Setting key="UpdateURL" value="http://not.real/" type="10"/>
+<Setting key="AutoPatchGlobal" value="false" type="1"/>
+<Setting key="AutoUpdate" value="false" type="1"/>
+
+</Settings>
 ```
 
 ## Controller not working
