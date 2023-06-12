@@ -66,11 +66,11 @@ ModData
 1. Under "Launch Options", paste the following into the textbox: `WINEDLLOVERRIDES="bcrypt=n,b" %command%`
 1. Extract the contents of the downloaded release of this repo (`~/Downloads/FrostyLinux.tar.gz`) to your game folder (`$HOME/.steam/steam/steamapps/common/Need for Speed Heat/`). The game folder will be elsewhere if installed on an external drive
 1. In the game folder, rename your game's executable by prepending "original_": `NeedForSpeedHeat.exe` -> `original_NeedForSpeedHeat.exe`
-1. Rename `shim.exe` to the name of your the name that your game's executable had previously: `shim.exe` -> `NeedForSpeedHeat.exe`
+1. Rename `shim.exe` to the name that your game's executable had previously: `shim.exe` -> `NeedForSpeedHeat.exe`
 1. Open the `setup_linuxmod*.sh` script in a text editor
 1. Change the variable `FROSTY_PROFILE_PATH="ModData/Editor"` to the path of your profile. If you are using the Editor, you don't need to change this. If not, for example: `FROSTY_PROFILE_PATH="ModData/Default"` will be the default profile in the Mod Manager. This is case-sensitive
 1. Save
-1. Run the `setup_linuxmod*.sh` script: `./setup_linuxmod_nfs-heat.sh`. The working directory should not matter as the script `cd`s to the correct folder. As long as all errors look like `ln: failed to create symbolic link 'LinuxMod/patch/*': File exists`, this has succeeded
+1. Run the `setup_linuxmod*.sh` script: `./setup_linuxmod_nfs-heat.sh`. The working directory should not matter as the script `cd`s to the correct folder
 1. "Play" the game from Steam and cross your fingers :)
 
 # Subsequent usage of Frosty
@@ -88,7 +88,7 @@ Try a different Proton version, or a version of [Proton GE](https://github.com/G
 ## Issues with EA Play (No Steam overlay, crashes)
 [Source for allowing continued use of Origin \(Works June 2023\)](https://twitter.com/p0358/status/1635796691902160896)
 1. Download OriginSetup-10.5.119.52718.exe - [Archive Link \(Use caution\)](https://taskinoz.com/origin/)
-2. Set the STEAM_COMPAT_DATA_PATH and WINEPREFIX to your version, then execute the install:
+2. Set the `STEAM_COMPAT_DATA_PATH` and `WINEPREFIX` to your version, then execute the install as shown below:
 ```sh
 export STEAM_COMPAT_DATA_PATH="$HOME/.steam/steam/steamapps/compatdata/1222680/"
 export WINEPREFIX="$HOME/.steam/steam/steamapps/compatdata/1222680/pfx"
