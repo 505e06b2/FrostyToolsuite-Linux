@@ -6,7 +6,7 @@ This guide assumes that you will be running your game through Proton (bought on 
 ## Verified Games
 | Steam ID | Title | DRM | Frosty | Proton |
 |         -|      -|    -|       -|       -|
-|[1222680](https://store.steampowered.com/app/1222680/)| Need for Speed Heat | EA Play + Origin | [1.0.6.1 Editor](https://github.com/CadeEvs/FrostyToolsuite/releases/tag/v1.0.6.1) | [GE v7-55](https://github.com/GloriousEggroll/proton-ge-custom/releases/tag/GE-Proton7-55) |
+|[1222680](https://store.steampowered.com/app/1222680/)| Need for Speed Heat | [Origin](#issues-with-ea-play-no-steam-overlay-crashes) | [1.0.6.1 Editor](https://github.com/CadeEvs/FrostyToolsuite/releases/tag/v1.0.6.1) | [GE v7-55](https://github.com/GloriousEggroll/proton-ge-custom/releases/tag/GE-Proton7-55) |
 
 # Installation
 
